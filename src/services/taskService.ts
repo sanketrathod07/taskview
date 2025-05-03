@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { Task, TaskInput, TaskStatus } from '../types/task';
 
-const API_URL = 'http://localhost:8000/api';
+const API_URL = 'https://taskview-backend.onrender.com/api';
 
 // Set up axios instance
 const api = axios.create({
