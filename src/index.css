@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-surface-light text-gray-800 dark:bg-[#080D14] dark:text-gray-200 transition-colors duration-200;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+
+  h1 {
+    @apply text-3xl md:text-4xl leading-tight;
+  }
+
+  h2 {
+    @apply text-2xl md:text-3xl leading-snug;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl;
+  }
+
+  button, a {
+    @apply transition-all duration-200;
+  }
+
+  input, textarea, select {
+    @apply transition-all duration-150 outline-none;
+  }
+}
+
+@layer components {
+  .container-fluid {
+    @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .btn {
+    @apply rounded-lg font-medium px-4 py-2 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-60 disabled:pointer-events-none;
+  }
+  
+  .btn-primary {
+    @apply btn bg-primary-600 text-white hover:bg-primary-700 focus:ring-primary-500;
+  }
+  
+  .btn-secondary {
+    @apply btn bg-secondary-600 text-white hover:bg-secondary-700 focus:ring-secondary-500;
+  }
+  
+  .btn-accent {
+    @apply btn bg-accent-600 text-white hover:bg-accent-700 focus:ring-accent-500;
+  }
+  
+  .btn-outline {
+    @apply btn border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 focus:ring-gray-400;
+  }
+  
+  .card {
+    @apply bg-white dark:bg-gray-800 rounded-xl shadow-light dark:shadow-dark overflow-hidden transition-all duration-200;
+  }
+  
+  .card-hover {
+    @apply hover:shadow-light-md dark:hover:shadow-dark-md;
+  }
+  
+  .form-input {
+    @apply w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-lg 
+    bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100
+    focus:ring-2 focus:ring-primary-500 focus:border-primary-500 
+    disabled:opacity-60 disabled:bg-gray-100 dark:disabled:bg-gray-900;
+  }
+  
+  .form-label {
+    @apply block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1;
+  }
+  
+  .form-error {
+    @apply text-sm text-error-600 dark:text-error-400 mt-1;
+  }
+  
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+  
+  .badge-primary {
+    @apply badge bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-300;
+  }
+  
+  .badge-secondary {
+    @apply badge bg-secondary-100 text-secondary-800 dark:bg-secondary-900 dark:text-secondary-300;
+  }
+  
+  .badge-success {
+    @apply badge bg-success-100 text-success-800 dark:bg-success-900 dark:text-success-300;
+  }
+  
+  .badge-warning {
+    @apply badge bg-warning-100 text-warning-800 dark:bg-warning-900 dark:text-warning-300;
+  }
+  
+  .badge-error {
+    @apply badge bg-error-100 text-error-800 dark:bg-error-900 dark:text-error-300;
+  }
+}
