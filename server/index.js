@@ -28,7 +28,7 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://sanketrathod7420:sank
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-  origin: [process.env.FRONTEND_URL, 'http://localhost:5173'],
+  origin: [import.meta.env.VITE_FRONTEND_URL, 'http://localhost:5173'],
   credentials: true,
 }));
 
