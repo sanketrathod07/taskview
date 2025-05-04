@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { User } from '../types/user';
 
-const API_URL = `${import.meta.env.VITE_BACKEND_URL}api`;
+const API_URL = `${import.meta.env.VITE_BACKEND_URL}/api`;
 
 // Set up axios instance
 const api = axios.create({
