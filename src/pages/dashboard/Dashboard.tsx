@@ -11,7 +11,6 @@ import { getTasksByProjectId } from '../../services/projectService';
 
 const Dashboard = () => {
   const { projects, isLoading } = useProjects();
-  console.log('Projects:', projects);
   const { user } = useAuth();
   const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('profile');

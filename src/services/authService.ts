@@ -1,12 +1,12 @@
 import axios from 'axios';
 import { User } from '../types/user';
 
-const API_URL = 'https://taskview-backend.onrender.com/api';
+const API_URL = `${import.meta.env.VITE_BACKEND_URL}api`;
 
 // Set up axios instance
 const api = axios.create({
   baseURL: API_URL,
-  withCredentials: true, // to handle cookies for authentication
+  withCredentials: true,
 });
 
 // Register a new user

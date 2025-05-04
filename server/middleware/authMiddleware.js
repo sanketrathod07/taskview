@@ -21,7 +21,7 @@ const protect = async (req, res, next) => {
 
   try {
     // Verify token
-    const decoded = jwt.verify(token, process.env.JWT_SECRET || 'mysecretkey');
+    const decoded = jwt.verify(token, process.env.JWT_SECRET || 'taskflowsecretkey2025');
 
     // Add user to request
     req.user = await User.findById(decoded.id);
