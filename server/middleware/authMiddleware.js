@@ -24,7 +24,7 @@ const protect = async (req, res, next) => {
     const decoded = jwt.verify(token, 'taskflowsecretkey2025');
 
     // Add user to request
-    req.user = await User.findById(decoded.id);
+    req.user = await User.findById(decoded.id).select('-password');
 
     if (!req.user) {
       return res.status(401).json({
