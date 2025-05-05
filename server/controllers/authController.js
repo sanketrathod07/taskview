@@ -3,7 +3,7 @@ import User from '../models/User.js';
 
 // Generate JWT token
 const generateToken = (id) => {
-  return jwt.sign({ id }, process.env.JWT_SECRET || 'mysecretkey', {
+  return jwt.sign({ id }, process.env.JWT_SECRET || 'taskflowsecretkey2025', {
     expiresIn: '30d',
   });
 };
